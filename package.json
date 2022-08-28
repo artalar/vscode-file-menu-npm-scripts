@@ -1,8 +1,8 @@
 {
   "name": "vscode-file-menu-npm-scripts",
-  "displayName": "vscode-file-menu-npm-scripts",
-  "description": "vscode-file-menu-npm-scripts",
-  "version": "0.0.1",
+  "displayName": "NPM scripts in file menu",
+  "description": "adds \"Show NPM scripts\" menu to the file explorer",
+  "version": "0.0.2",
   "publisher": "artalar",
   "repository": {
     "type": "git",
