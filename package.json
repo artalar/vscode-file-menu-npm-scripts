@@ -3,6 +3,11 @@
   "displayName": "vscode-file-menu-npm-scripts",
   "description": "vscode-file-menu-npm-scripts",
   "version": "0.0.1",
+  "publisher": "artalar",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/artalar/vscode-file-menu-npm-scripts.git"
+  },
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -14,16 +19,19 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [{
-      "command": "vscode-file-menu-npm-scripts.showNpmScripts",
-      "title": "Show NPM scripts"
-    }],
+    "commands": [
+      {
+        "command": "vscode-file-menu-npm-scripts.showNpmScripts",
+        "title": "Show NPM scripts"
+      }
+    ],
     "menus": {
       "explorer/context": [
         {
-            "command": "vscode-file-menu-npm-scripts.showNpmScripts",
-            "when": "explorerResourceIsFolder || resourceFilename == package.json"
-        }]
+          "command": "vscode-file-menu-npm-scripts.showNpmScripts",
+          "when": "explorerResourceIsFolder || resourceFilename == package.json"
+        }
+      ]
     },
     "keybindings": [
       {
@@ -42,16 +50,17 @@
     "lint": "eslint src --ext ts"
   },
   "devDependencies": {
-    "@types/vscode": "^1.70.0",
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",
+    "@types/vscode": "^1.70.0",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
+    "@vscode/test-electron": "^2.1.5",
     "eslint": "^8.20.0",
     "glob": "^8.0.3",
     "mocha": "^10.0.0",
     "typescript": "^4.7.4",
-    "@vscode/test-electron": "^2.1.5"
+    "vsce": "^2.10.2"
   }
 }
